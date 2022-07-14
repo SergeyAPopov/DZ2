@@ -1,31 +1,16 @@
-﻿System.Console.WriteLine("Введите номер дня недели");
+﻿Console.WriteLine("Ведите число");
 int Num = Convert.ToInt32(Console.ReadLine());
-if (Num > 7)
+
+if (Num > 99)
 {
-System.Console.WriteLine("Нет такого дня недели");
+   while (Num > 999) 
+   {
+    Num /= 10;
+   }
+   int res = Num % 10;
+   System.Console.WriteLine(res);
 }
 else 
 {
-bool isMultiplicity (int Num)
-{
-    return(Num == 7 || Num == 6 );
+    Console.WriteLine("Третьей цифры нет");
 }
-Console.WriteLine(isMultiplicity(Num));
-}
-
-// так тоже работает 
-// int Num = Convert.ToInt32(Console.ReadLine());
-
-// if (Num > 7)
-// {
-// System.Console.WriteLine("Нет такого дня недели");
-// }
-// else 
-// {
-//     if (Num <=5)
-//     {
-//         System.Console.WriteLine("нет");
-//     }
-//     else 
-//     System.Console.WriteLine("да");
-// }
